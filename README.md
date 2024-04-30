@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+Iniciar con Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue creado con Create React App.
 
-## Available Scripts
+En el directorio del proyecto, puedes ejecutar:
 
-In the project directory, you can run:
+npm start
+Inicia la aplicación en modo de desarrollo.
+Abre http://localhost:3000 para verla en tu navegador.
 
-### `npm start`
+La página se recargará automáticamente cuando hagas cambios.
+También podrás ver errores de lint en la consola.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Características Principales:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Ingreso de usuarios y funcionarios.
+Creación, modificación y eliminación de usuarios.
+Menús diferenciados para usuarios y funcionarios.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Estructura del Repositorio:
 
-### `npm run build`
+## Estructura de Enrutamiento
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La aplicación utiliza React Router para gestionar las rutas. Aquí tienes un resumen de las rutas y los componentes asociados:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ -App.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Ruta "/"**: Representa la página de inicio de la aplicación y muestra el componente `Inicio`.
+- **Ruta "/ingreso"**: Dirige a la página de inicio de sesión y muestra el componente `IngresoApp`.
+- **Ruta "/ingreso-usuarios"**: También dirige a la página de inicio de sesión y muestra el componente `IngresoApp`.
+- **Ruta "/ingreso-funcionarios"**: Dirige a la página de inicio de sesión para los funcionarios y muestra el componente `IngresoFuncionarios`.
+- **Ruta "/menu-funcionarios"**: Muestra el menú principal para los funcionarios y muestra el componente `MenuFuncionarios`.
+- **Ruta "/crear-usuario"**: Permite crear un nuevo usuario y muestra el componente `CrearUsuario`.
+- **Ruta "/usuarios-modificar"**: Permite modificar usuarios existentes y muestra el componente `ModificarUsuario`.
+- **Ruta "/usuarios-eliminar"**: Permite eliminar usuarios y muestra el componente `EliminarUsuario`.
+- **Ruta "/menu-usuarios"**: Muestra el menú principal para los usuarios y muestra el componente `MenuUsuarios`.
 
-### `npm run eject`
+Para más detalles sobre cada componente, consulta los archivos correspondientes en la carpeta `src/components`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+La carpeta src contiene todo el código fuente de tu aplicación,
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- src
+  - components
+    - CrearUsuario.js
+    - EliminarUsuario.js
+    - Home.js
+    - IngresoApp.js
+    - IngresoFuncionarios.js
+    - ListaUsuarios.js
+    - MenuFuncionarios.js
+    - MenuUsuarios.js
+    - ModificarUsuario.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+     
+   los estilos en la carpeta css
+  
+  - css
+    - EstilosSubMenu.css
+    - Home.css
+    - IngresoApp.css
+    - MenuFuncionarios.css
+    - MenuUsuarios.css
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+los scripts PHP en la carpeta Server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - Server
+    - login.php
+    - CrearUsuario.php
+    - conexion.php
+    
+Aunque esta creada la carpeta de coneccion para la BD no, se uso ya REST los realice unicamnete desde React y PhP
 
-### Code Splitting
+las imágenes en la carpeta Imagenes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  - Imagenes
+    
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
